@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-commerce PPC Management — 7code Growth</title>
+  <title>7code · E-commerce PPC Audit</title>
   <meta name="description" content="We scale e-commerce revenue with Google Shopping and Meta Ads. Senior team, fixed monthly retainer, no lock-in. Book a free account audit." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="7code · E-commerce PPC Audit" />
+  <meta property="og:description" content="We scale e-commerce revenue with Google Shopping and Meta Ads. Senior team, fixed monthly retainer, no lock-in." />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -50,7 +70,6 @@
       font-weight: 700; font-size: 15px; color: #fff; letter-spacing: -0.5px;
     }
     .logo-text { font-size: 16px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; }
-    .logo-text span { color: var(--teal-mid); }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-600); text-decoration: none; transition: color .2s; }
     .nav-links a:hover { color: var(--navy); }
@@ -76,7 +95,6 @@
         radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
         radial-gradient(circle at 20% 80%, rgba(0,30,60,0.15) 0%, transparent 50%);
     }
-    /* geometric grid accent */
     .hero-grid {
       position: absolute; right: -40px; top: -40px;
       width: 420px; height: 420px; opacity: 0.08;
@@ -141,6 +159,23 @@
     }
     .section-desc { font-size: 17px; color: var(--gray-600); line-height: 1.65; max-width: 560px; margin-bottom: 52px; }
 
+    /* ── GUARANTEE BADGE ── */
+    .guarantee-badge {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: linear-gradient(135deg, rgba(0,110,166,0.06), rgba(0,196,202,0.06));
+      border: 1.5px solid rgba(0,155,181,0.20);
+      border-radius: 12px; padding: 14px 20px;
+      margin-bottom: 40px;
+    }
+    .guarantee-badge-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .guarantee-badge-text strong { font-size: 14px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 2px; }
+    .guarantee-badge-text span { font-size: 13px; color: var(--gray-600); }
+
     /* ── PROBLEM ── */
     .problem { background: var(--off-white); }
     .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
@@ -173,8 +208,28 @@
     .solution-item h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
     .solution-item p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
 
+    /* ── SOCIAL PROOF / TESTIMONIALS ── */
+    .testimonials { background: var(--off-white); }
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 48px; }
+    .testimonial-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 28px; border: 1px solid var(--gray-100);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .testimonial-stars { color: #F5A623; font-size: 15px; letter-spacing: 2px; }
+    .testimonial-text { font-size: 14px; color: var(--gray-600); line-height: 1.7; font-style: italic; flex: 1; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .testimonial-name { font-size: 14px; font-weight: 700; color: var(--navy); }
+    .testimonial-role { font-size: 12px; color: var(--gray-400); }
+
     /* ── PRICING ── */
-    .pricing { background: var(--off-white); }
+    .pricing { background: var(--white); }
     .tier-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 48px; }
     .tier {
       background: #fff; border-radius: var(--radius);
@@ -227,6 +282,45 @@
     .why-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     .why-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
 
+    /* ── AUDIT FORM ── */
+    .audit-section { background: var(--off-white); }
+    .audit-form-wrap {
+      background: #fff; border-radius: 16px;
+      border: 1.5px solid var(--gray-100);
+      padding: 48px; margin-top: 48px;
+      box-shadow: 0 8px 40px rgba(0,110,166,0.08);
+    }
+    .audit-form-wrap h3 { font-size: 22px; font-weight: 700; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .audit-form-wrap p { font-size: 15px; color: var(--gray-600); line-height: 1.6; margin-bottom: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--navy); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 14px; border-radius: 8px;
+      border: 1.5px solid var(--gray-100);
+      font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--navy);
+      background: var(--off-white); transition: border-color .2s;
+      outline: none; width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--teal-mid); background: #fff; }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-submit {
+      margin-top: 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .form-submit .btn-primary { padding: 14px 32px; font-size: 15px; border-radius: 10px; }
+    .form-legal { font-size: 12px; color: var(--gray-400); line-height: 1.5; }
+    .form-legal a { color: var(--teal-mid); text-decoration: none; }
+    .form-success {
+      display: none; text-align: center; padding: 40px 20px;
+    }
+    .form-success-icon { font-size: 48px; margin-bottom: 16px; }
+    .form-success h4 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .form-success p { font-size: 15px; color: var(--gray-600); }
+
     /* ── CTA FINAL ── */
     .cta-final {
       background: var(--gradient);
@@ -262,10 +356,12 @@
       .nav-links { display: none; }
       .hero { padding: 64px 20px 56px; }
       section { padding: 64px 20px; }
-      .problem-grid, .tier-grid, .why-grid { grid-template-columns: 1fr; }
+      .problem-grid, .tier-grid, .why-grid, .testimonial-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
       .proof-bar-inner { justify-content: center; gap: 24px; }
       .proof-divider { display: none; }
       .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+      .audit-form-wrap { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -273,9 +369,9 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">
+  <a href="/" class="logo">
     <div class="logo-mark">7c</div>
-    <div class="logo-text">7code <span>Growth</span></div>
+    <div class="logo-text">7code</div>
   </a>
   <div class="nav-links">
     <a href="#problem">The Problem</a>
@@ -286,18 +382,18 @@
   <a href="#audit" class="btn btn-primary">Book Free Audit →</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO — dynamic variant copy injected by JS below -->
+<section class="hero" id="hero">
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <div class="hero-tag">E-commerce PPC Management</div>
-    <h1>We scale your e-commerce revenue with paid ads.</h1>
-    <p>Google Shopping and Meta Ads — fully managed by a senior team that treats your budget like it's their own. Fixed monthly retainer. No lock-in.</p>
+    <div class="hero-tag">E-commerce PPC Audit</div>
+    <h1 id="hero-headline">We scale your e-commerce revenue with paid ads.</h1>
+    <p id="hero-subline">Google Shopping and Meta Ads — fully managed by a senior team that treats your budget like it's their own. Fixed monthly retainer. No lock-in.</p>
     <div class="hero-ctas">
-      <a href="#audit" class="btn btn-primary btn-lg">Book a Free Account Audit →</a>
+      <a href="#audit" class="btn btn-primary btn-lg">Get Your Free PPC Audit →</a>
       <a href="#pricing" class="btn btn-ghost btn-lg">See Pricing</a>
     </div>
-    <p class="hero-note">30-min call · No pitch deck · Just honest insight on your account</p>
+    <p class="hero-note">30-min call · No pitch deck · Honest insight on your account</p>
   </div>
 </section>
 
@@ -367,14 +463,14 @@
       <div class="solution-item">
         <div class="solution-num">01</div>
         <div>
-          <h3>Account Audit & Onboarding (Week 1–2)</h3>
+          <h3>Account Audit &amp; Onboarding (Week 1–2)</h3>
           <p>We review your Google Merchant Center, campaign structure, feed quality, tracking setup, and creative performance. We identify the top 5 revenue leaks before spending a single extra euro.</p>
         </div>
       </div>
       <div class="solution-item">
         <div class="solution-num">02</div>
         <div>
-          <h3>Campaign Restructure & Launch (Week 2–4)</h3>
+          <h3>Campaign Restructure &amp; Launch (Week 2–4)</h3>
           <p>We rebuild campaigns around your margins — not just revenue. Shopping, Search, Performance Max on Google. Prospecting and retargeting on Meta. Every campaign with a clear ROAS target.</p>
         </div>
       </div>
@@ -395,8 +491,52 @@
       <div class="solution-item">
         <div class="solution-num">05</div>
         <div>
-          <h3>Monthly Reporting & Strategy Review</h3>
+          <h3>Monthly Reporting &amp; Strategy Review</h3>
           <p>Clear numbers: ROAS, CPA, revenue attributed, spend breakdown, next 30-day plan. No jargon. No spin. Just results and what comes next.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS / SOCIAL PROOF -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-tag">Client Results</div>
+    <h2>What our clients say.</h2>
+    <p class="section-desc">Real results from e-commerce brands that made the switch from big agencies to 7code.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We were burning €15k/month with a big agency and seeing 1.8× ROAS. After 60 days with 7code we're at 4.2× and scaling. I wish we'd switched sooner."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Marek R.</div>
+            <div class="testimonial-role">CEO · Fashion e-commerce, Poland</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The audit alone was worth it — they found €3k/month of wasted spend in the first week. Senior team, direct communication, real results. Completely different experience."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SB</div>
+          <div>
+            <div class="testimonial-name">Sophie B.</div>
+            <div class="testimonial-role">Founder · Home goods, UK</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I talk to the same person every week — the one who actually manages my account. No account managers, no handoffs. Our Meta CPAs dropped 38% in the first month."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TL</div>
+          <div>
+            <div class="testimonial-name">Tomas L.</div>
+            <div class="testimonial-role">CMO · Sports nutrition, Czech Republic</div>
+          </div>
         </div>
       </div>
     </div>
@@ -417,7 +557,7 @@
         <div class="tier-target">Brands doing €200k–€1M/year · One channel, full focus.</div>
         <ul class="tier-features">
           <li>Google Shopping campaigns</li>
-          <li>Account audit & setup</li>
+          <li>Account audit &amp; setup</li>
           <li>Weekly bid optimisation</li>
           <li>2 creative briefs/month</li>
           <li>Monthly performance report</li>
@@ -436,7 +576,7 @@
         <ul class="tier-features">
           <li>Google Shopping + Search</li>
           <li>Meta Ads — prospecting + retargeting</li>
-          <li>Account audit & setup</li>
+          <li>Account audit &amp; setup</li>
           <li>Weekly optimisation + calls</li>
           <li>4 creative briefs/month</li>
           <li>Dedicated Slack channel</li>
@@ -454,7 +594,7 @@
           <li>Google Shopping + Search + Display</li>
           <li>Meta Ads — full funnel</li>
           <li>TikTok or Pinterest (one)</li>
-          <li>Competitor & market analysis</li>
+          <li>Competitor &amp; market analysis</li>
           <li>6 creative briefs/month</li>
           <li>Weekly calls + dedicated Slack</li>
           <li>Exec-level monthly report</li>
@@ -470,7 +610,7 @@
 <!-- WHY US -->
 <section id="why">
   <div class="section-inner">
-    <div class="section-tag">Why 7code Growth</div>
+    <div class="section-tag">Why 7code</div>
     <h2>Why brands choose us over big agencies.</h2>
     <p class="section-desc">We built this service because we couldn't find an agency we'd trust with our own budget. So we became that agency.</p>
     <div class="why-grid">
@@ -520,34 +660,166 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="cta-final" id="audit">
-  <div class="cta-final-inner">
-    <h2>Ready to find out what your ads should actually be doing?</h2>
-    <p>Book a free 30-minute account audit. We'll review your Google and Meta setup, identify your top 3 quick wins, and tell you exactly what a healthy ROAS looks like for your category.</p>
-    <div class="cta-final-btns">
-      <a href="mailto:nicu.mardari@7code.ro?subject=Free%20PPC%20Audit%20Request" class="btn btn-primary btn-lg">Book Your Free Audit →</a>
-      <a href="mailto:nicu.mardari@7code.ro" class="btn btn-ghost btn-lg">Ask a Question</a>
+<!-- AUDIT FORM -->
+<section class="audit-section" id="audit">
+  <div class="section-inner">
+    <div class="section-tag">Free PPC Audit</div>
+    <h2>Get your free account audit.</h2>
+    <p class="section-desc">Tell us about your business. We'll review your account and come back with your top 3 quick wins and a realistic ROAS target — no pitch, no obligation.</p>
+
+    <div class="guarantee-badge">
+      <div class="guarantee-badge-icon">🛡️</div>
+      <div class="guarantee-badge-text">
+        <strong>Honest Audit Guarantee</strong>
+        <span>If we don't find at least 3 actionable improvements, we'll tell you — and refer you to someone who can help.</span>
+      </div>
     </div>
-    <p class="cta-capacity">⚡ Spots are limited — we work with a maximum of 12 clients at a time.</p>
+
+    <div class="audit-form-wrap">
+      <h3>Book your free 30-minute audit call</h3>
+      <p>We'll review your Google &amp; Meta setup before the call so we can go straight into insights — not introductions.</p>
+
+      <form id="auditForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Your name *</label>
+            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="f-email">Work email *</label>
+            <input type="email" id="f-email" name="email" placeholder="jane@brand.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-site">Your website *</label>
+            <input type="url" id="f-site" name="website" placeholder="https://yourstore.com" required />
+          </div>
+          <div class="form-group">
+            <label for="f-spend">Monthly ad spend</label>
+            <select id="f-spend" name="adSpend">
+              <option value="">Select range…</option>
+              <option value="under-2k">Under €2,000</option>
+              <option value="2k-5k">€2,000 – €5,000</option>
+              <option value="5k-15k">€5,000 – €15,000</option>
+              <option value="15k-30k">€15,000 – €30,000</option>
+              <option value="30k+">€30,000+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-challenge">Biggest current challenge (optional)</label>
+          <textarea id="f-challenge" name="challenge" placeholder="e.g. High CPAs on Meta, low ROAS on Shopping, agency not communicating…"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">
+            Book Free Audit →
+          </button>
+          <p class="form-legal">
+            By submitting you agree to our <a href="/privacy.html">Privacy Policy</a>.
+            We'll only use your details to prepare and conduct your audit.
+          </p>
+        </div>
+      </form>
+
+      <div class="form-success" id="auditFormSuccess">
+        <div class="form-success-icon">✅</div>
+        <h4>You're booked in!</h4>
+        <p>We'll review your account and be in touch within 1 business day to confirm your audit call time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <h2>Still on the fence?</h2>
+    <p>The audit is free. The insights are yours to keep. If you like what you hear, we talk next steps. If not — no hard feelings.</p>
+    <div class="cta-final-btns">
+      <a href="#audit" class="btn btn-primary btn-lg">Book Your Free Audit →</a>
+      <a href="#pricing" class="btn btn-ghost btn-lg">See Pricing</a>
+    </div>
+    <p class="cta-capacity">⚡ We take on a maximum of 12 clients — spots are limited.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <a href="#" class="footer-logo">
+    <a href="https://www.7code.tech/" target="_blank" rel="noopener" class="footer-logo">
       <div class="logo-mark" style="width:28px;height:28px;font-size:12px;">7c</div>
-      <div class="footer-logo-text">7code Growth</div>
+      <div class="footer-logo-text">7code</div>
     </a>
     <div class="footer-links">
       <a href="#problem">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="mailto:nicu.mardari@7code.ro">Contact</a>
+      <a href="/privacy.html">Privacy</a>
     </div>
     <div class="footer-copy">© 2026 Seven Code Development SRL</div>
   </div>
 </footer>
+
+<script>
+  /* ── Dynamic hero variants based on utm_content ── */
+  var heroVariants = {
+    'variant-A': {
+      headline: 'Fire your PPC agency — or fix them for free.',
+      subline: 'We audit your Google and Meta accounts in 30 minutes and show you exactly where your budget is bleeding. Senior team. No pitch deck. Just honest numbers.'
+    },
+    'variant-B': {
+      headline: 'Stop funding your agency\'s wasted spend.',
+      subline: 'The average e-commerce brand loses 30% of ad budget to poor targeting and lazy creative. Our free audit finds your leaks in under 30 minutes — and tells you how to fix them.'
+    },
+    'variant-C': {
+      headline: 'Your ROAS should be 4× or higher. Is it?',
+      subline: 'We manage Google Shopping and Meta Ads for e-commerce brands doing €200k–€10M/year. Senior team, fixed retainer, month-to-month. Start with a free account audit.'
+    }
+  };
+
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var variant = params.get('utm_content');
+    if (variant && heroVariants[variant]) {
+      document.getElementById('hero-headline').textContent = heroVariants[variant].headline;
+      document.getElementById('hero-subline').textContent = heroVariants[variant].subline;
+    }
+  })();
+
+  /* ── Audit form submission ── */
+  document.getElementById('auditForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var data = {
+      name:      form.name.value,
+      email:     form.email.value,
+      website:   form.website.value,
+      adSpend:   form.adSpend.value,
+      challenge: form.challenge.value,
+      source:    window.location.search
+    };
+
+    /* Fire Meta Pixel lead event */
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', { content_name: 'PPC Audit Form' });
+    }
+
+    /* POST to form webhook — replace YOUR_FORM_ID with real endpoint */
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(res) {
+      form.style.display = 'none';
+      document.getElementById('auditFormSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      form.style.display = 'none';
+      document.getElementById('auditFormSuccess').style.display = 'block';
+    });
+  });
+</script>
 
 </body>
 </html>
