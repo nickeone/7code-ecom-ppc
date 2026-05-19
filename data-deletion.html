@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Data Deletion — 7code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal-mid: #009BB5; --navy: #0F1C2E; --white: #FFFFFF;
+      --off-white: #F5F7FA; --gray-100: #EEF1F5; --gray-400: #9AACBB;
+      --gray-600: #556677; --gradient: linear-gradient(135deg, #006EA6 0%, #00C4CA 100%);
+    }
+    body { font-family: 'DM Sans', sans-serif; color: var(--navy); background: var(--white); -webkit-font-smoothing: antialiased; }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 0 40px; height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 15px; color: #fff; letter-spacing: -0.5px;
+    }
+    .logo-text { font-size: 16px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; }
+    .content { max-width: 720px; margin: 0 auto; padding: 72px 40px 96px; }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; }
+    .last-updated { font-size: 13px; color: var(--gray-400); margin-bottom: 48px; }
+    h2 { font-size: 20px; font-weight: 700; color: var(--navy); margin: 40px 0 12px; }
+    p, li { font-size: 15px; color: var(--gray-600); line-height: 1.75; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ol { padding-left: 20px; margin-bottom: 12px; }
+    a { color: var(--teal-mid); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: var(--off-white); border-left: 4px solid var(--teal-mid);
+      border-radius: 4px; padding: 20px 24px; margin: 32px 0;
+    }
+    .callout p { margin-bottom: 0; }
+    footer {
+      background: var(--navy); padding: 28px 40px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .footer-copy { font-size: 12px; color: var(--gray-400); }
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .content { padding: 48px 20px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">7c</div>
+    <div class="logo-text">7code</div>
+  </a>
+  <a href="/" style="font-size:14px;color:var(--gray-600);text-decoration:none;">← Back to home</a>
+</nav>
+
+<div class="content">
+  <h1>User Data Deletion Instructions</h1>
+  <p class="last-updated">Last updated: May 2026</p>
+
+  <p>Seven Code Development SRL ("7code") is committed to respecting your right to erasure under <strong>GDPR Article 17</strong> and applicable data-protection law. This page explains how to request deletion of any personal data we hold about you, and what to expect after you do.</p>
+
+  <h2>What Data We Hold</h2>
+  <p>If you submitted our PPC audit request form, we may hold:</p>
+  <ul>
+    <li>Your name and work email address</li>
+    <li>Your website URL and monthly ad-spend range</li>
+    <li>Any message or challenge description you provided voluntarily</li>
+    <li>UTM / referral parameters logged at the time of submission</li>
+    <li>Meta Pixel event data associated with your browser (managed by Meta Platforms, Inc.)</li>
+  </ul>
+
+  <h2>How to Request Deletion</h2>
+  <p>To have your data erased, send a deletion request by email:</p>
+
+  <div class="callout">
+    <p><strong>Email:</strong> <a href="mailto:nicu.mardari@7code.ro">nicu.mardari@7code.ro</a><br/>
+    <strong>Subject line:</strong> Data Deletion Request<br/>
+    <strong>Include:</strong> the email address you used when submitting the form (so we can locate your record)</p>
+  </div>
+
+  <h2>What Happens Next</h2>
+  <ol>
+    <li>We will acknowledge your request within <strong>72 hours</strong>.</li>
+    <li>We will verify your identity to prevent unauthorised deletion requests.</li>
+    <li>Your data will be permanently deleted from our systems and from Formspree (our form processor) within <strong>30 days</strong> of confirmation.</li>
+    <li>We will send you a written confirmation once deletion is complete.</li>
+  </ol>
+
+  <h2>Meta Pixel Data</h2>
+  <p>Event data collected via the Meta Pixel (Pixel ID: 1066738195364104) is processed by Meta Platforms, Inc. under their own data policy. To delete or opt out of Meta's use of your data:</p>
+  <ul>
+    <li>Visit <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener">facebook.com/settings → Ads</a></li>
+    <li>Use Meta's <a href="https://www.facebook.com/help/contact/861937627253138" target="_blank" rel="noopener">Off-Facebook Activity</a> tool to clear and disconnect your activity</li>
+  </ul>
+
+  <h2>Your Rights Under GDPR Article 17</h2>
+  <p>You have the right to obtain erasure of personal data concerning you without undue delay where one of the following grounds applies:</p>
+  <ul>
+    <li>The data is no longer necessary for the purposes for which it was collected</li>
+    <li>You withdraw consent and there is no other legal ground for processing</li>
+    <li>You object to the processing and there are no overriding legitimate grounds</li>
+    <li>The data has been unlawfully processed</li>
+    <li>Erasure is required to comply with a legal obligation</li>
+  </ul>
+  <p>If you believe your request has not been handled correctly, you have the right to lodge a complaint with your national data-protection authority.</p>
+
+  <h2>Contact</h2>
+  <p>Seven Code Development SRL<br/>
+  Data inquiries: <a href="mailto:nicu.mardari@7code.ro">nicu.mardari@7code.ro</a><br/>
+  Privacy policy: <a href="/privacy.html">ppc.7code.tech/privacy.html</a><br/>
+  Website: <a href="https://www.7code.tech/" target="_blank" rel="noopener">www.7code.tech</a></p>
+</div>
+
+<footer>
+  <p class="footer-copy">© 2026 Seven Code Development SRL</p>
+</footer>
+
+</body>
+</html>
