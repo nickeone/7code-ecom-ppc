@@ -16,9 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
 
-  <!-- ────────────────────────────────────────────────────────
-       META PIXEL · replace YOUR_PIXEL_ID with the real Pixel ID
-       ──────────────────────────────────────────────────────── -->
+  <!-- META PIXEL -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,11 +26,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('init', '1066738195364104');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1066738195364104&ev=PageView&noscript=1"
   /></noscript>
   <!-- END META PIXEL -->
 
@@ -74,14 +72,7 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-mark {
-      width: 36px; height: 36px; border-radius: 8px;
-      background: var(--gradient);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 15px; color: #fff; letter-spacing: -0.5px;
-    }
-    .logo-text { font-size: 16px; font-weight: 700; color: var(--navy); letter-spacing: -0.3px; }
-    .logo-text span { color: var(--teal-mid); }
+    .logo-svg { display: block; }
     .nav-links { display: flex; align-items: center; gap: 32px; }
     .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-600); text-decoration: none; transition: color .2s; }
     .nav-links a:hover { color: var(--navy); }
@@ -401,8 +392,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
-    <div class="logo-mark">7c</div>
-    <div class="logo-text">7code</div>
+    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 96 30" aria-label="7code"><text y="24" font-family="DM Sans,sans-serif" font-weight="700" font-size="28" letter-spacing="-0.5"><tspan fill="#00C4CA">7</tspan><tspan fill="#0F1C2E">code</tspan></text></svg>
   </a>
   <div class="nav-links">
     <a href="#problem">The Problem</a>
@@ -775,8 +765,7 @@
 <footer>
   <div class="footer-inner">
     <a href="#" class="footer-logo">
-      <div class="logo-mark" style="width:28px;height:28px;font-size:12px;">7c</div>
-      <div class="footer-logo-text">7code</div>
+      <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 84 26" aria-label="7code"><text y="21" font-family="DM Sans,sans-serif" font-weight="700" font-size="24" letter-spacing="-0.5"><tspan fill="#00C4CA">7</tspan><tspan fill="#FFFFFF">code</tspan></text></svg>
     </a>
     <div class="footer-links">
       <a href="#problem">Services</a>
@@ -863,7 +852,7 @@
   const successBox = document.getElementById('formSuccess');
 
   // Replace with your webhook URL (Formspree / Make / n8n / Zapier / custom)
-  const FORM_WEBHOOK = 'https://formspree.io/f/YOUR_FORM_ID';
+  const FORM_WEBHOOK = 'https://formspree.io/f/xbdblezl';
 
   function showError(msg) {
     errorBox.textContent = msg;
