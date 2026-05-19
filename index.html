@@ -34,6 +34,16 @@
   /></noscript>
   <!-- END META PIXEL -->
 
+  <!-- MICROSOFT CLARITY · session recordings + heatmaps -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wtjp0yl622");
+  </script>
+  <!-- END MICROSOFT CLARITY -->
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -811,6 +821,13 @@
   else if (uc === 'variant-b' || uc === 'b') variant = 'B';
   document.getElementById('variant').value = variant;
 
+  // Tag Clarity session with variant + campaign for segmented analysis
+  if (typeof window.clarity === 'function') {
+    clarity('set', 'variant', variant);
+    clarity('set', 'utm_campaign', utm.utm_campaign || 'direct');
+    clarity('set', 'utm_source', utm.utm_source || 'direct');
+  }
+
   // ── 2. DYNAMIC HERO ───────────────────────────────────────
   const heroVariants = {
     'A': {
@@ -880,6 +897,14 @@
     formData.forEach(function(value, key) { payload[key] = value; });
 
     payload.qualified = isQualified(payload);
+
+    // Tag Clarity session with form outcome
+    if (typeof window.clarity === 'function') {
+      clarity('set', 'submitted', 'yes');
+      clarity('set', 'qualified', payload.qualified ? 'yes' : 'no');
+      clarity('set', 'revenue_band', payload.revenue || 'unknown');
+      clarity('set', 'platform', payload.platform || 'unknown');
+    }
 
     try {
       const res = await fetch(FORM_WEBHOOK, {
