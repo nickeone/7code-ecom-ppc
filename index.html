@@ -814,11 +814,12 @@
     if (el) el.value = utm[key];
   });
 
-  // Variant detection — A / B / default
+  // Variant detection — C / D / E / default
   let variant = 'default';
-  const uc = (utm.utm_content || '').toLowerCase();
-  if (uc === 'variant-a' || uc === 'a') variant = 'A';
-  else if (uc === 'variant-b' || uc === 'b') variant = 'B';
+  const uc = (utm.utm_content || '').toUpperCase();
+  if (uc === 'C' || uc.startsWith('C-')) variant = 'C';
+  else if (uc === 'D' || uc.startsWith('D-')) variant = 'D';
+  else if (uc === 'E' || uc.startsWith('E-')) variant = 'E';
   document.getElementById('variant').value = variant;
 
   // Tag Clarity session with variant + campaign for segmented analysis
