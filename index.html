@@ -720,7 +720,8 @@
         <select id="ad_spend" name="ad_spend" required>
           <option value="">Select your spend range…</option>
           <option value="under_2k">Under €2k/mo</option>
-          <option value="2k_10k">€2k – €10k/mo</option>
+          <option value="2k_5k">€2k – €5k/mo</option>
+          <option value="5k_10k">€5k – €10k/mo</option>
           <option value="10k_plus">€10k+/mo</option>
           <option value="not_running">Not running ads yet</option>
         </select>
@@ -889,7 +890,7 @@
   function isQualified(data) {
     const goodRevenue = ['1m_3m', '3m_plus'].includes(data.revenue);
     const goodPlatform = ['shopify', 'woocommerce'].includes(data.platform);
-    const goodSpend = ['2k_10k', '10k_plus'].includes(data.ad_spend);
+    const goodSpend = ['2k_5k', '5k_10k', '10k_plus'].includes(data.ad_spend);
     return goodRevenue && goodPlatform && goodSpend;
   }
 
