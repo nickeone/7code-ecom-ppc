@@ -810,10 +810,10 @@
 
   // Variant detection — C / D / E / default
   let variant = 'default';
-  const uc = (utm.utm_content || '').toUpperCase();
-  if (uc === 'C' || uc.startsWith('C-')) variant = 'C';
-  else if (uc === 'D' || uc.startsWith('D-')) variant = 'D';
-  else if (uc === 'E' || uc.startsWith('E-')) variant = 'E';
+  const uc = (utm.utm_content || '').toLowerCase();
+  if (uc.startsWith('c-') || uc === 'c') variant = 'C';
+  else if (uc.startsWith('d-') || uc === 'd') variant = 'D';
+  else if (uc.startsWith('e-') || uc === 'e') variant = 'E';
   document.getElementById('variant').value = variant;
 
   // Tag Clarity session with variant + campaign for segmented analysis
@@ -824,34 +824,36 @@
   }
 
   // ── 2. DYNAMIC HERO ───────────────────────────────────────
+  // Run: ppc-audit-uknl-pricing-20260527
+  // Variants: default + C (pay-for-results) + D (flat €1,500) + E (guarantee + 1mo free)
   const heroVariants = {
-    'default': {
-      tag: 'Free PPC Audit',
-      h1: 'Get more out of your ad budget — without hiring an agency.',
-      sub: 'Free 30-minute audit. We find your biggest money leaks in Google and Facebook ads — and tell you exactly how to fix them. Plain English. No pitch.',
-      formH2: 'Get your free PPC audit.',
-      formSub: '30 minutes. We\'ll review your Google and Facebook ads, find your top 3 issues, and tell you exactly what to fix first. No pitch. No pressure.'
+    default: {
+      tag: "Free PPC Audit",
+      h1: "Get more out of your ad budget — without hiring an agency.",
+      sub: "Free 30-minute audit. We find your biggest money leaks in Google and Facebook ads — and tell you exactly how to fix them. Plain English. No pitch.",
+      formH2: "Get your free PPC audit.",
+      formSub: "30 minutes. We'll review your Google and Facebook ads, find your top 3 issues, and tell you exactly what to fix first. No pitch. No pressure."
     },
-    'C': {
-      tag: 'Performance-Only PPC',
-      h1: 'Pay only when we drive sales.',
-      sub: 'We run your Shopify or WooCommerce ads. You pay a % of the revenue we generate. No retainer. No setup fee. Free 30-min audit first.',
-      formH2: 'Get your free audit.',
-      formSub: '30 minutes. We open your account, find the leaks, then propose a performance-only deal. No pitch. Cancel before signing if it\'s not for you.'
+    C: {
+      tag: "Performance-Only PPC",
+      h1: "Pay only when we drive sales.",
+      sub: "We run your Shopify or WooCommerce ads. You pay a % of the revenue we generate. No retainer. No setup fee. Free 30-min audit first.",
+      formH2: "Get your free audit.",
+      formSub: "30 minutes. We open your account, find the leaks, then propose a performance-only deal. No pitch. Cancel before signing if it's not for you."
     },
-    'D': {
-      tag: 'Predictable Flat PPC',
-      h1: '€1,500/month. No %. No setup. No lock-in.',
-      sub: 'Predictable monthly PPC management for Shopify and WooCommerce founders. Senior team. Cancel anytime. Free 30-min audit before you commit.',
-      formH2: 'Get your free audit.',
-      formSub: '30 minutes. We review your Google and Meta ads, show you exactly what we\'d change in the first 30 days. €1,500 flat after — no pitch deck.'
+    D: {
+      tag: "Predictable Flat PPC",
+      h1: "€1,500/month. No %. No setup. No lock-in.",
+      sub: "Predictable monthly PPC management for Shopify and WooCommerce founders. Senior team. Cancel anytime. Free 30-min audit before you commit.",
+      formH2: "Get your free audit.",
+      formSub: "30 minutes. We review your Google and Meta ads, show you exactly what we'd change in the first 30 days. €1,500 flat after — no pitch deck."
     },
-    'E': {
-      tag: 'The €5,000 Guarantee',
-      h1: 'We find €5,000 of wasted spend — or one month free.',
-      sub: '30-minute audit for Shopify and WooCommerce stores. If we don\'t uncover €5,000 of wasted spend, you get one month of PPC management free (€1,500 value). Guarantee applies to ad accounts spending €5k+/mo.',
-      formH2: 'Get your free audit.',
-      formSub: '30 minutes. We open your Google and Meta ad accounts, find €5k of waste — or pay it back with one month of management free. Guarantee applies to brands spending €5k+/mo on ads. Smaller stores still get the full audit.'
+    E: {
+      tag: "The €5,000 Guarantee",
+      h1: "We find €5,000 of wasted spend — or one month free.",
+      sub: "30-minute audit for Shopify and WooCommerce stores. If we don't uncover €5,000 of wasted spend, you get one month of PPC management free (€1,500 value). Guarantee applies to ad accounts spending €5k+/mo.",
+      formH2: "Get your free audit.",
+      formSub: "30 minutes. We open your Google and Meta ad accounts, find €5k of waste — or pay it back with one month of management free. Guarantee applies to brands spending €5k+/mo on ads. Smaller stores still get the full audit."
     }
   };
 
